@@ -4,8 +4,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/ad">
+    android:background="#000000">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="270dp"
+        android:text="Borstel."
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="48dp"
+        android:typeface="serif"
+        android:textStyle="italic"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:text="We Wash With Love"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="16dp"
+        android:typeface="serif"
+        android:textStyle="italic"/>
 
 </LinearLayout>

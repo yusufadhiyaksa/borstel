@@ -2,13 +2,14 @@ package com.example.borstel;
 
 public class Produk {
     private String Title;
-    private String Thumbnail;
+    private int Thumbnail;
     private String Description;
 
     public Produk() {
     }
 
-    public Produk(String title, String thumbnail, String description) {
+
+    public Produk(String title, int thumbnail, String description) {
         Title = title;
         Thumbnail = thumbnail;
         Description = description;
@@ -18,7 +19,7 @@ public class Produk {
         return Title;
     }
 
-    public String getThumbnail() {
+    public int getThumbnail() {
         return Thumbnail;
     }
 
@@ -30,11 +31,14 @@ public class Produk {
         Title = title;
     }
 
-    public void setThumbnail(String thumbnail) {
+    public void setThumbnail(int thumbnail) {
         Thumbnail = thumbnail;
     }
 
     public void setDescription(String description) {
         Description = description;
     }
+
 }
+
+
