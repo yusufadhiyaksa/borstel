@@ -14,12 +14,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
+public class RecyclerViewAdapterJasa extends RecyclerView.Adapter<RecyclerViewAdapterJasa.MyViewHolder> {
 
     private Context mContext ;
-    private List<Produk> mData ;
+    private List<Jasa> mData ;
 
-    public RecyclerViewAdapter(Context mContext, List<Produk> mData) {
+    public RecyclerViewAdapterJasa(Context mContext, List<Jasa> mData) {
         this.mContext = mContext;
         this.mData = mData;
     }
@@ -28,25 +28,25 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view ;
         LayoutInflater mInflater = LayoutInflater.from(mContext);
-        view = mInflater.inflate(R.layout.cardview_produk,parent,false);
+        view = mInflater.inflate(R.layout.cardview_jasa,parent,false);
         return new MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
 
-        holder.tv_produk_title.setText(mData.get(position).getTitle());
-        holder.img_produk_thumbnail.setImageResource(mData.get(position).getThumbnail());
+        holder.tv_jasa_title.setText(mData.get(position).getTitle_Jasa());
+        holder.img_jasa_thumbnail.setImageResource(mData.get(position).getThumbnail_Jasa());
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 //Lempar data ke produk activity
-                Intent intent = new Intent(mContext, Produk_Activity.class);
-                intent.putExtra("Title",mData.get(position).getTitle());
-                intent.putExtra("Description",mData.get(position).getDescription());
-                intent.putExtra("Harga",mData.get(position).getHarga());
-                intent.putExtra("Thumbnail",mData.get(position).getThumbnail());
+                Intent intent = new Intent(mContext, Jasa_Activity.class);
+                intent.putExtra("Title",mData.get(position).getTitle_Jasa());
+                intent.putExtra("Description",mData.get(position).getDescription_Jasa());
+                intent.putExtra("Harga",mData.get(position).getHarga_Jasa());
+                intent.putExtra("Thumbnail",mData.get(position).getThumbnail_Jasa());
                 //Memulai activity
                 mContext.startActivity(intent);
             }
@@ -61,15 +61,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView tv_produk_title;
-        ImageView img_produk_thumbnail;
+        TextView tv_jasa_title;
+        ImageView img_jasa_thumbnail;
         CardView cardView;
 
         public MyViewHolder(View itemView) {
             super(itemView);
-            tv_produk_title = (TextView) itemView.findViewById(R.id.produk_title);
-            img_produk_thumbnail = (ImageView) itemView.findViewById((R.id.produk_img));
-            cardView = (CardView) itemView.findViewById(R.id.cardview_id);
+            tv_jasa_title = (TextView) itemView.findViewById(R.id.jasa_title);
+            img_jasa_thumbnail = (ImageView) itemView.findViewById((R.id.jasa_img));
+            cardView = (CardView) itemView.findViewById(R.id.cardviewjasa_id);
         }
     }
 
