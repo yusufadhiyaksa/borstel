@@ -4,15 +4,16 @@ public class Produk {
     private String Title;
     private int Thumbnail;
     private String Description;
+    private String Harga;
 
     public Produk() {
     }
 
-
-    public Produk(String title, int thumbnail, String description) {
+    public Produk(String title, int thumbnail, String description, String harga) {
         Title = title;
         Thumbnail = thumbnail;
         Description = description;
+        Harga = harga;
     }
 
     public String getTitle() {
@@ -27,6 +28,10 @@ public class Produk {
         return Description;
     }
 
+    public String getHarga() {
+        return Harga;
+    }
+
     public void setTitle(String title) {
         Title = title;
     }
@@ -39,6 +44,10 @@ public class Produk {
         Description = description;
     }
 
+    public void setHarga(String harga) {
+        Harga = harga;
+    }
 }
+
 
 
