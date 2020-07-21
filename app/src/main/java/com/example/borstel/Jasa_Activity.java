@@ -3,13 +3,11 @@ package com.example.borstel;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Jasa_Activity extends Activity {
 
-    private TextView tvtitle, tvharga, tvdescription;
-    private ImageView img;
+    private TextView tvtitle, tvharga, tvdescription, tvdurasi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,20 +17,20 @@ public class Jasa_Activity extends Activity {
         tvtitle = (TextView) findViewById(R.id.jasatitle);
         tvharga = (TextView) findViewById(R.id.jasaharga);
         tvdescription = (TextView) findViewById(R.id.jasadesc);
-        img = (ImageView) findViewById(R.id.jasathumbnail);
+        tvdurasi = (TextView) findViewById(R.id.jasadurasi);
 
         //Menerima Data
         Intent intent = getIntent();
         String Title = intent.getExtras().getString("Title");
         String Harga = intent.getExtras().getString("Harga");
         String Description = intent.getExtras().getString("Description");
-        int image = intent.getExtras().getInt("Thumbnail");
+        String Durasi = intent.getExtras().getString("Durasi");
 
         //Setting Values
 
         tvtitle.setText(Title);
         tvharga.setText(Harga);
         tvdescription.setText(Description);
-        img.setImageResource(image);
+        tvdescription.setText(Description);
     }
 }

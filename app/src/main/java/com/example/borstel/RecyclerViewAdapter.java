@@ -41,7 +41,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             @Override
             public void onClick(View v) {
 
-                //Lempar data ke produk activity
+                //Lempar data ke Jasa activity
                 Intent intent = new Intent(mContext, Produk_Activity.class);
                 intent.putExtra("Title",mData.get(position).getTitle());
                 intent.putExtra("Description",mData.get(position).getDescription());
