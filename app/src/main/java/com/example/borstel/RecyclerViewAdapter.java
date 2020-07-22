@@ -16,7 +16,7 @@ import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
 
-    private Context mContext ;
+    Context mContext ;
     private List<Produk> mData ;
 
     public RecyclerViewAdapter(Context mContext, List<Produk> mData) {
@@ -27,9 +27,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view ;
-        LayoutInflater mInflater = LayoutInflater.from(mContext);
-        view = mInflater.inflate(R.layout.cardview_produk,parent,false);
-        return new MyViewHolder(view);
+        view = LayoutInflater.from(mContext).inflate(R.layout.cardview_produk,parent,false);
+        MyViewHolder vHld = new MyViewHolder(view);
+        return vHld;
     }
 
     @Override
@@ -39,7 +39,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.img_produk_thumbnail.setImageResource(mData.get(position).getThumbnail());
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
 
                 //Lempar data ke Jasa activity
                 Intent intent = new Intent(mContext, Produk_Activity.class);
@@ -61,9 +61,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView tv_produk_title;
-        ImageView img_produk_thumbnail;
-        CardView cardView;
+        private TextView tv_produk_title;
+        private ImageView img_produk_thumbnail;
+        private CardView cardView;
 
         public MyViewHolder(View itemView) {
             super(itemView);
