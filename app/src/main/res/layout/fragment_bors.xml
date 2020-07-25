@@ -3,8 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/tranparant"
     tools:context=".FragmentBors"
-    android:padding="10dp">
+    android:padding="20dp">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -15,104 +16,172 @@
             android:orientation="vertical">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="440dp"
-                android:orientation="horizontal">
+                android:layout_height="120dp"
+                android:padding="20dp">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/bors_logo"/>
                 <LinearLayout
-                    android:layout_width="120dp"
-                    android:layout_height="match_parent"
-                    android:background="#639FFF"
-                    android:paddingLeft="10dp"
-                    android:orientation="vertical">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Borstel."
-                        android:textStyle="bold"
-                        android:layout_marginTop="40dp"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="26sp"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical"
+                     android:layout_marginLeft="6dp">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="We Wash With Love"
-                        android:textSize="15dp"
-                        android:textColor="@color/colorPrimary"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-                    <ImageView
-                        android:layout_width="190dp"
-                        android:layout_height="120dp"
-                        android:background="@drawable/bors_img"
-                        android:layout_marginRight="30dp"
-                        android:layout_gravity="right"
-                        android:layout_marginTop="30dp"/>
+                        android:text="Borstel."
+                        android:textSize="28sp"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:textColor="@color/colorPrimaryDark"/>
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="20dp"
-                        android:padding="20dp"
-                        android:textSize="12.4sp"
-                        android:text="Dilema karena minimnya waktu buat bisa rawat sepatu, sekedar membersihkan pun kadang terbengkalai. Ada masalah ada solusi, setelah tadi kita tahu masalahnya, Borstel hadir sebagai solusi. Pengetahuan dan pengalaman menjadi modal dalam memberikan beberapa service perawatan sepatu kalian. Because we do care about your shoes and we wash with love - Itulah Borstel, Jadi udah bisa mulai deket kan kita? So, let's start to care about shoes."/>
-
+                        android:layout_width="wrap_content"
+                        android:text="We Wash With Love"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"/>
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="520dp"
-                android:orientation="vertical">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="220dp"
                     android:layout_height="wrap_content"
-                    android:text="How to Order"
+                    android:textSize="14sp"
                     android:textStyle="bold"
-                    android:layout_marginTop="40dp"
-                    android:textSize="26sp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Know Our Timeline"
-                    android:textSize="15dp"/>
+                    android:textColor="@color/colorPrimaryDark"
+                    android:fontFamily="sans-serif-thin"
+                    android:text="Dilema karena minimnya waktu buat bisa rawat sepatu, sekedar membersihkan pun kadang terbengkalai. Ada masalah ada solusi, setelah tadi kita tahu masalahnya, Borstel hadir sebagai solusi. Pengetahuan dan pengalaman menjadi modal dalam memberikan beberapa service perawatan sepatu kalian. Because we do care about your shoes and we wash with love - Itulah Borstel, Jadi udah bisa mulai deket kan kita? So, let's start to care about shoes."/>
                 <ImageView
-                    android:layout_width="360dp"
-                    android:layout_height="300dp"
-                    android:layout_gravity="right"
-                    android:layout_marginTop="100dp"
-                    android:background="@drawable/bors_rsv"/>
+                    android:layout_width="140dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/bors_img" />
             </LinearLayout>
+            <TextView
+                android:layout_marginTop="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="How To Order."
+                android:textSize="28sp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textColor="@color/colorPrimaryDark"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Know Our Timeline"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"/>
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="30dp">
                 <TextView
-                    android:paddingLeft="10dp"
-                    android:layout_width="360dp"
-                    android:layout_height="40dp"
-                    android:text="Store Location"
-                    android:textSize="26dp"
-                    android:textColor="@color/colorPrimary"
-                    android:layout_gravity="right"
-                    android:layout_marginTop="20dp"
-                    android:background="#4E4949"/>
-                <ImageView
-                    android:layout_width="320dp"
-                    android:layout_height="360dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="40dp"
-                    android:background="@drawable/bors_lokasi"
-                    android:layout_marginBottom="40dp"/>
-                <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Open Maps"
-                    android:textColor="@color/colorPrimary"
-                    android:background="@color/colorPrimaryDark"
-                    android:layout_gravity="center"
-                    android:padding="10dp"
-                    android:layout_marginBottom="20dp"/>
+                    android:text="Reservation"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15sp"
+                    android:fontFamily="sans-serif-thin"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Pick-up, Identification, Consultation"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-thin"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="Order our Service"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="17sp"
+                    android:fontFamily="sans-serif-thin"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="30dp"
+                    android:text="Treatment"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp"
+                    android:fontFamily="sans-serif-thin"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="Packaging"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="19sp"
+                    android:fontFamily="sans-serif-thin"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:text="Done"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:background="#CC000000"
+                    android:fontFamily="sans-serif-thin"
+                    android:textStyle="bold"/>
             </LinearLayout>
+            <TextView
+                android:layout_marginTop="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Store Location."
+                android:textSize="28sp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textColor="@color/colorPrimaryDark"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp">
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/bors_lokasi"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-thin"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="14sp"
+                    android:text="Jl Waas I No. 6 Batununggal Bandung"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="40dp"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:text="Maps"
+                android:background="#9F000000"
+                android:textSize="11sp"
+                android:textColor="#FFFFFF"
+                android:fontFamily="casual"/>
+
         </LinearLayout>
     </ScrollView>
 

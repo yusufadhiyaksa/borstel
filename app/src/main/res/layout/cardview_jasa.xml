@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/cardviewjasa_id"
-    android:clickable="true"
-    android:foreground="?android:attr/selectableItemBackground"
+    android:background="@color/semiTranparant"
     android:layout_width="match_parent"
-    android:layout_height="160dp"
+    android:layout_height="140dp"
     xmlns:cardview="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="5dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
     cardview:cardCornerRadius="4dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="#2d2d2d">
 
         <LinearLayout
             android:layout_width="150dp"
@@ -23,11 +25,11 @@
                 android:id="@+id/jasa_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="30dp"
                 android:textSize="13sp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
-                android:textColor="#2d2d2d"
+                android:textColor="#fff"
                 android:text="Produk"
                 android:textStyle="bold"/>
             <TextView
@@ -38,7 +40,7 @@
                 android:textSize="8sp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
-                android:textColor="#2d2d2d"
+                android:textColor="#fff"
                 android:text="Produk"/>
 
         </LinearLayout>
@@ -49,11 +51,12 @@
             android:layout_height="match_parent">
             <TextView
                 android:id="@+id/jasa_durasi"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="40dp"
+                android:paddingLeft="10dp"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:textSize="13sp"
-                android:textColor="#2d2d2d"
+                android:textColor="#fff"
                 android:text="Durasi"/>
 
         </LinearLayout>
@@ -65,10 +68,10 @@
             android:id="@+id/jasa_harga"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="57dp"
+            android:layout_marginTop="37dp"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:textColor="#2d2d2d"
+            android:textColor="#fff"
             android:textAlignment="center"
             android:text="Harga"/>
 

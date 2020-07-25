@@ -4,26 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/bg_app">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorPrimaryDark">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="We Wash With Love"
-                android:textSize="18dp"
-                android:textColor="@color/colorPrimary"/>
-
-        </androidx.appcompat.widget.Toolbar>
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab_layout"
@@ -34,9 +21,9 @@
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/view_pager"
+        android:background="#97FFFFFF"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorPrimary"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

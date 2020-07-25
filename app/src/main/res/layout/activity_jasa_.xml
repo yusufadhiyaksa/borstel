@@ -1,77 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Jasa_Activity"
-    android:orientation="vertical">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
 
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
-        android:padding="10dp">
         <LinearLayout
+            android:id="@+id/ijasa"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="320dp"
-                android:layout_height="220dp"
-                android:background="#2d2d2d"
-                android:layout_marginTop="30dp"
-                android:scaleType="centerCrop"
-                android:id="@+id/jasathumbnail"/>
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:background="#232323">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Produk Title"
-                android:layout_marginTop="10dp"
-                android:textSize="18dp"
+                android:layout_marginTop="90dp"
+                android:textSize="28sp"
                 android:textStyle="bold"
+                android:textColor="#ffffff"
                 android:id="@+id/jasatitle"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Produk Durasi"
-                android:layout_marginTop="10dp"
-                android:textSize="18dp"
-                android:textStyle="bold"
-                android:id="@+id/jasadurasi"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Harga"
                 android:layout_marginTop="5dp"
-                android:textSize="14dp"
-                android:padding="4dp"
-                android:background="#edecec"
-                android:id="@+id/jasaharga"/>
-
-
-            <TextView
-                android:id="@+id/jasadesc"
-                android:layout_width="320dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="35dp"
-                android:lineSpacingExtra="10sp"
-                android:text="Description"
-                android:textAlignment="center"
-                android:textSize="16dp" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pesan"
                 android:textColor="#ffffff"
-                android:background="#020202"
-                android:layout_marginTop="40dp"/>
-
+                android:textSize="18sp"
+                android:id="@+id/jasaharga"/>
+            <Button
+                android:padding="20dp"
+                android:drawablePadding="20dp"
+                android:drawableLeft="@drawable/ic_local_phone_black_24dp"
+                android:textAlignment="textStart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pesan Sekarang"
+                android:layout_marginTop="10dp"
+                android:background="#ffffff"/>
         </LinearLayout>
 
-    </androidx.core.widget.NestedScrollView>
-
-</LinearLayout>
+</RelativeLayout>

@@ -24,11 +24,8 @@ public class MainActivity extends AppCompatActivity {
 
     private FragmentHome fragmentHome;
     private FragmentProduk fragmentProduk;
-    private FragmentTips fragmentTips;
     private FragmentBors fragmentBors;
 
-    List<Produk> lstProduk;
-    List<Jasa> lstJasa;
 
 
     @Override
@@ -36,30 +33,25 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         viewPager = findViewById(R.id.view_pager);
         tabLayout = findViewById(R.id.tab_layout);
 
         fragmentHome = new FragmentHome();
         fragmentProduk = new FragmentProduk();
-        fragmentTips = new FragmentTips();
         fragmentBors = new FragmentBors();
 
         tabLayout.setupWithViewPager(viewPager);
 
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(), 0);
-        viewPagerAdapter.addFragmet(fragmentHome, "Home");
-        viewPagerAdapter.addFragmet(fragmentProduk, "Shop");
-        viewPagerAdapter.addFragmet(fragmentTips, "Tips");
-        viewPagerAdapter.addFragmet(fragmentBors, "About Us");
+        viewPagerAdapter.addFragmet(fragmentBors, "Home");
+        viewPagerAdapter.addFragmet(fragmentHome, "PriceList");
+        viewPagerAdapter.addFragmet(fragmentProduk, "Shop");;
         viewPager.setAdapter(viewPagerAdapter);
 
         tabLayout.getTabAt(0).setIcon(R.drawable.ic_home_black_24dp);
-        tabLayout.getTabAt(1).setIcon(R.drawable.ic_shopping_cart_black_24dp);
-        tabLayout.getTabAt(2).setIcon(R.drawable.ic_local_library_black_24dp);
-        tabLayout.getTabAt(3).setIcon(R.drawable.ic_sentiment_very_satisfied_black_24dp);
+        tabLayout.getTabAt(1).setIcon(R.drawable.ic_local_library_black_24dp);
+        tabLayout.getTabAt(2).setIcon(R.drawable.ic_shopping_cart_black_24dp);
 
     }
 

@@ -10,10 +10,26 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <TextView
+            android:paddingLeft="10dp"
+            android:layout_marginTop="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Brand New Launch."
+            android:textSize="28sp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textColor="@color/colorPrimaryDark"/>
+        <TextView
+            android:paddingLeft="10dp"
+            android:layout_width="wrap_content"
+            android:text="Produk Terbaru Dari Kami"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryDark"/>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerview_id"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="490dp"
             android:layout_margin="10dp">
         </androidx.recyclerview.widget.RecyclerView>
 

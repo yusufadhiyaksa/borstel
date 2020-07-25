@@ -6,6 +6,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -49,6 +50,7 @@ public class FragmentProduk extends Fragment {
         RecyclerView mrv = (RecyclerView) view.findViewById(R.id.recyclerview_id);
         RecyclerViewAdapter myAdapterProduk = new RecyclerViewAdapter(getContext(), lstProduk);
         mrv.setLayoutManager(new LinearLayoutManager(getActivity()));
+        mrv.setLayoutManager(new GridLayoutManager(getContext(),3));
         mrv.setAdapter(myAdapterProduk);
         return view;
     }

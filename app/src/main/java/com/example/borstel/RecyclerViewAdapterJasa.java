@@ -1,11 +1,14 @@
 package com.example.borstel;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -14,7 +17,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 public class RecyclerViewAdapterJasa extends RecyclerView.Adapter<RecyclerViewAdapterJasa.MyViewHolder> {
-
     Context mContext ;
     private List<Jasa> mData ;
 
@@ -27,7 +29,8 @@ public class RecyclerViewAdapterJasa extends RecyclerView.Adapter<RecyclerViewAd
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v ;
         v = LayoutInflater.from(mContext).inflate(R.layout.cardview_jasa,parent,false);
-        MyViewHolder vHolder = new MyViewHolder(v);
+        final MyViewHolder vHolder = new MyViewHolder(v);
+
         return vHolder;
     }
 
@@ -38,20 +41,6 @@ public class RecyclerViewAdapterJasa extends RecyclerView.Adapter<RecyclerViewAd
         holder.tv_jasa_desc.setText(mData.get(position).getDescription_Jasa());
         holder.tv_jasa_harga.setText(mData.get(position).getHarga_Jasa());
         holder.tv_jasa_durasi.setText(mData.get(position).getDurasi_Jasa());
-        holder.cardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                //Lempar data ke jasa activity
-                Intent intent = new Intent(mContext, Jasa_Activity.class);
-                intent.putExtra("Title",mData.get(position).getTitle_Jasa());
-                intent.putExtra("Description",mData.get(position).getDescription_Jasa());
-                intent.putExtra("Harga",mData.get(position).getHarga_Jasa());
-                intent.putExtra("Durasi",mData.get(position).getDurasi_Jasa());
-                //Memulai activity
-                mContext.startActivity(intent);
-            }
-        });
 
     }
 
@@ -67,6 +56,7 @@ public class RecyclerViewAdapterJasa extends RecyclerView.Adapter<RecyclerViewAd
         private TextView tv_jasa_harga;
         private TextView tv_jasa_durasi;
         private CardView cardView;
+        private LinearLayout i_jasa;
 
         public MyViewHolder(View itemView) {
             super(itemView);
@@ -75,6 +65,7 @@ public class RecyclerViewAdapterJasa extends RecyclerView.Adapter<RecyclerViewAd
             tv_jasa_harga = (TextView) itemView.findViewById(R.id.jasa_harga);
             tv_jasa_durasi = (TextView) itemView.findViewById(R.id.jasa_durasi);
             cardView = (CardView) itemView.findViewById(R.id.cardviewjasa_id);
+            i_jasa = (LinearLayout) itemView.findViewById(R.id.ijasa);
         }
     }
 
