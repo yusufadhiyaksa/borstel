@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -18,9 +17,9 @@ import java.util.List;
 
 public class RecyclerViewAdapterJasa extends RecyclerView.Adapter<RecyclerViewAdapterJasa.MyViewHolder> {
     Context mContext ;
-    private List<Jasa> mData ;
+    private List<ModelJasa> mData ;
 
-    public RecyclerViewAdapterJasa(Context mContext, List<Jasa> mData) {
+    public RecyclerViewAdapterJasa(Context mContext, List<ModelJasa> mData) {
         this.mContext = mContext;
         this.mData = mData;
     }
@@ -37,10 +36,10 @@ public class RecyclerViewAdapterJasa extends RecyclerView.Adapter<RecyclerViewAd
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
 
-        holder.tv_jasa_title.setText(mData.get(position).getTitle_Jasa());
-        holder.tv_jasa_desc.setText(mData.get(position).getDescription_Jasa());
-        holder.tv_jasa_harga.setText(mData.get(position).getHarga_Jasa());
-        holder.tv_jasa_durasi.setText(mData.get(position).getDurasi_Jasa());
+        holder.tv_jasa_title.setText(mData.get(position).getJasaNama());
+        holder.tv_jasa_desc.setText(mData.get(position).getJasaDesc());
+        holder.tv_jasa_harga.setText(mData.get(position).getJasaHarga());
+        holder.tv_jasa_durasi.setText(mData.get(position).getJasaDurasi());
 
     }
 

@@ -1,6 +1,9 @@
 package com.example.borstel;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -85,5 +88,19 @@ public class MainActivity extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             return framentTitle.get(position);
         }
+    }
+    public void openWA(View view) {
+        Intent sendWA = new Intent();
+        sendWA.setAction(Intent.ACTION_SEND);
+        sendWA.putExtra(Intent.EXTRA_TEXT, "Hi Borstel");
+        sendWA.putExtra("jid", "62895370301188" + "@s.whatsapp.net");
+        sendWA.setType("text/plain");
+        sendWA.setPackage("com.whatsapp");
+        startActivity(sendWA);
+    }
+
+    public  void openMap(View view) {
+        Intent map = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com/maps/place/Jl.+Waas+I+No.6,+Batununggal,+Kec.+Bandung+Kidul,+Kota+Bandung,+Jawa+Barat+40266/@-6.9513756,107.6242606,16z/data=!4m13!1m7!3m6!1s0x2e68e85e8f585e25:0x6784414ee13c880f!2sJl.+Waas+I+No.6,+Batununggal,+Kec.+Bandung+Kidul,+Kota+Bandung,+Jawa+Barat+40266!3b1!8m2!3d-6.951119!4d107.6267052!3m4!1s0x2e68e85e8f585e25:0x6784414ee13c880f!8m2!3d-6.951119!4d107.6267052"));
+        startActivity(map);
     }
 }

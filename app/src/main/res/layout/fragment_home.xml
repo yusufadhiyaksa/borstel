@@ -32,6 +32,7 @@
              android:layout_height="540dp"
              android:layout_marginTop="20dp">
          </androidx.recyclerview.widget.RecyclerView>
+
          <Button
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
@@ -39,11 +40,13 @@
              android:layout_marginTop="40dp"
              android:padding="10dp"
              android:textStyle="bold"
-             android:text="Oreder Now"
+             android:text="Order Now"
              android:background="#9F000000"
              android:textSize="11sp"
              android:textColor="#FFFFFF"
-             android:fontFamily="casual"/>
+             android:fontFamily="casual"
+             android:onClick="openWA"
+             tools:ignore="OnClick" />
      </LinearLayout>
     </ScrollView>
 

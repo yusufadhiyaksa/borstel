@@ -4,19 +4,23 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
+
 import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
     Context mContext2 ;
-    private List<Produk> mData2;
+    private List<ModelProduk> mData2;
 
-    public RecyclerViewAdapter(Context mContext2, List<Produk> mData2) {
+    public RecyclerViewAdapter(Context mContext2, List<ModelProduk> mData2) {
         this.mContext2 = mContext2;
         this.mData2 = mData2;
     }
@@ -33,7 +37,18 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.tv_produk_title.setText(mData2.get(position).getTitle());
+        holder.tv_produk_title.setText(mData2.get(position).getProdukNama());
+        ImageView img = ((MyViewHolder) holder).img_produk_thumbnail;
+
+        Glide.with(holder.itemView.getContext())
+                // LOAD URL DARI INTERNET
+                .load(mData2.get(position).getProdukGambar())
+                // LOAD GAMBAR AWAL SEBELUM GAMBAR UTAMA MUNCUL, BISA DARI LOKAL DAN INTERNET
+                .placeholder(R.drawable.bors_logo)
+                //. LOAD GAMBAR SAAT TERJADI KESALAHAN MEMUAT GMBR UTAMA
+                .error(R.drawable.ic_error_black_24dp)
+                .into(holder.img_produk_thumbnail);
+
     }
 
     @Override

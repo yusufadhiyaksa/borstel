@@ -4,30 +4,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#000000">
+    android:background="#000000"
+    android:gravity="center">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="270dp"
         android:text="Borstel."
         android:textAlignment="center"
         android:textColor="#ffffff"
         android:textSize="48dp"
-        android:typeface="serif"
-        android:textStyle="italic"/>
+        android:fontFamily="sans-serif-smallcaps"
+        android:textStyle="bold"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:layout_marginTop="0dp"
         android:text="We Wash With Love"
         android:textAlignment="center"
         android:textColor="#ffffff"
         android:textSize="16dp"
         android:typeface="serif"
-        android:textStyle="italic"/>
+        android:textStyle="bold"/>
 
 </LinearLayout>
